@@ -79,11 +79,15 @@ final class Elementor_Test_Extension {
 		// Include Widget files
 		require_once( __DIR__ . '/widgets/about-widget.php' );
 		require_once( __DIR__ . '/widgets/ads-widget.php' );
+		require_once( __DIR__ . '/widgets/slider-widget.php' );
+		require_once( __DIR__ . '/widgets/team-widget.php' );
 	
 
 		// Register widget
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_About_Widget() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Ads_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Slider_Widget() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Team_Widget() );
 
 	}
 

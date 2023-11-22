@@ -1,9 +1,10 @@
 <?php get_header(); ?>
 
-	
+
 <div class="container-fluid py-5">
-	<div class="container pt-5 pb-3">
-		<?php
+  <div class="container pt-5 pb-3">
+
+    <?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -18,7 +19,7 @@
 
 		endwhile; // End of the loop.
 		?>
-	</div>
+  </div>
 </div>
 
 <?php
