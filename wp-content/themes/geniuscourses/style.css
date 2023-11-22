@@ -1,0 +1,19 @@
+/*!
+Theme Name: GeniusCourses
+Theme URI: http://underscores.me/
+Author: CRIK0VA
+Author URI: http://underscores.me/
+Description: Мой Первый Шаблон!
+Version: 1.0.0
+Tested up to: 5.7
+Requires PHP: 7.3
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: geniuscourses
+
+*/
+
+
+.wp-caption {
+    font-size:10px;
+}

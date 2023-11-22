@@ -1,0 +1,9 @@
+{
+	"php with e": {
+		"prefix": "phe",
+		"body": [
+				"<?php esc_html_e($0); ?>"		
+		],
+		"description": "<?php ?>"
+	}
+}
