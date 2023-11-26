@@ -12,7 +12,10 @@
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/redux-options.php';
 require_once get_template_directory() . '/inc/custom-walker.php';
+require_once get_template_directory() . '/inc/custom-post-types.php';
 
+require_once get_template_directory() . '/inc/metaboxes-core.php';
+require_once get_template_directory() . '/inc/custom-metaboxes.php';
 
 
 
@@ -107,7 +110,6 @@ function geniuscourses_widgets_init() {
 		)
 	);
 
-	
 }
 add_action( 'widgets_init', 'geniuscourses_widgets_init' );
 
@@ -136,6 +138,7 @@ function geniuscourses_enqueue_scripts(){
 	}
 }
 add_action('wp_enqueue_scripts', 'geniuscourses_enqueue_scripts');
+
 
 function gc_fonts_url(){
 	$fonts_url = '';

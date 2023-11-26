@@ -29,7 +29,7 @@ class Elementor_About_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
-        $this->add_control(
+    $this->add_control(
 			'cars_title_one',
 			[
 				'label' => esc_html__( 'Title', 'plugin-domain' ),
@@ -46,6 +46,16 @@ class Elementor_About_Widget extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => __( 'Type your title here', 'plugin-domain' ),
 				'default' => 'Royal Cars'
+			]
+		);
+
+		$this->add_control(
+			'cars_subtitle',
+			[
+				'label' => esc_html__( 'SubTitle', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => '01',
+				'placeholder' => __( 'Type your subtitle here', 'plugin-domain' ),
 			]
 		);
 
@@ -82,7 +92,8 @@ class Elementor_About_Widget extends \Elementor\Widget_Base {
         ?>
 <div class="container-fluid py-5">
   <div class="container py-5">
-    <h1 class="display-4 text-uppercase text-center mb-5"><?php esc_html_e($settings['cars_title_one']);?><span
+    <h1 class="display-1 text-primary text-center"><?php esc_html_e($settings['cars_subtitle']); ?></h1>
+    <h1 class="display-4 text-uppercase text-center mb-5"><?php esc_html_e($settings['cars_title_one']);?>&nbsp;<span
         class="text-primary"><?php esc_html_e($settings['cars_title_two']); ?></span></h1>
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">

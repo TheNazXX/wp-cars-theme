@@ -37,6 +37,27 @@ class Elementor_Team_Widget extends Elementor\Widget_Base {
 			]
 		);
 
+
+		$this->add_control(
+			'wp_section_subtitle',
+			[
+				'label' => esc_html__( 'Section SubTitle', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => '01',
+				'placeholder' => __( 'Type your subtitle here', 'plugin-domain' ),
+			]
+		);
+
+		$this->add_control(
+			'wp_section_title',
+			[
+				'label' => esc_html__( 'Section Title', 'plugin-domain' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => 'Meet our team',
+				'placeholder' => __( 'Type your title here', 'plugin-domain' ),
+			]
+		);
+
     $repeater = new \Elementor\Repeater();
 
     
@@ -96,8 +117,8 @@ class Elementor_Team_Widget extends Elementor\Widget_Base {
 
 <div class="container-fluid py-5">
   <div class="container py-5">
-    <h1 class="display-1 text-primary text-center">04</h1>
-    <h1 class="display-4 text-uppercase text-center mb-5">Meet Our Team</h1>
+    <h1 class="display-1 text-primary text-center"><?php esc_html_e($settings['wp_section_subtitle']); ?></h1>
+    <h1 class="display-4 text-uppercase text-center mb-5"><?php esc_html_e($settings['wp_section_title']); ?></h1>
 
     <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
       <?php foreach($settings['slides'] as $slide){ ?>
