@@ -13,45 +13,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/4.0.0-alpha.11\n"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Pattern added"
 msgstr "S'ha afegit el patró"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Design Patterns"
 msgstr "Patrons de disseny"
 
 #. translators: %s is the site type name
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type: %s"
 msgstr "Tipus de lloc: %s"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Fetching..."
 msgstr "S'està recuperant..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Retrying..."
 msgstr "Tornant a intentar..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "All"
 msgstr "Tots"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Type"
 msgstr "Tipus de disseny"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading more patterns..."
 msgstr "S'estan carregant més patrons..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading Patterns..."
 msgstr "S'estan carregant els patrons..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Insert Pattern"
 msgstr "Insereix un patró"
 
@@ -64,18 +64,18 @@ msgstr "Configuració d'usuari de la Biblioteca Extendify"
 msgid "In order to use the AI-powered content drafting tool, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Per utilitzar l'eina d'esborrany de contingut impulsada per IA, heu d'acceptar els termes d'ús. Per a més informació, feu clic en aquest enllaç:"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Accept"
 msgstr "Accepta"
 
 #. translators: at the end of the sentence, there is a link to the terms of use
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 msgid "In order to use the AI-powered chatbot to answer your WordPress questions, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Per utilitzar el xatbot impulsat per IA per respondre a les vostres preguntes de WordPress, heu d'acceptar els termes d'ús. Per a més informació, feu clic en aquest enllaç:"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:1
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Terms of Use"
@@ -272,47 +272,47 @@ msgstr "Escriviu un esquema per a"
 msgid "Write a blog post about"
 msgstr "Escriu una entrada de blog sobre"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "For other questions, visit our support page."
 msgstr "Per a altres preguntes, visiteu la nostra pàgina de suport."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hide the chat bot"
 msgstr "Amaga el bot de xat"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "WordPress Comfort Level"
 msgstr "Nivell de comoditat amb el WordPress"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Recent History"
 msgstr "Historial recent"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Advanced"
 msgstr "Avançat"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Intermediate"
 msgstr "Intermedi"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Beginner"
 msgstr "Principiant"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was not helpful"
 msgstr "Valora que aquesta resposta no ha estat útil"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was helpful"
 msgstr "Valoreu si aquesta resposta ha estat útil"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Remove rating"
 msgstr "Elimina la valoració"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Enable the AI Chatbot"
 msgstr "Activa el xatbot d'IA"
 
@@ -332,31 +332,31 @@ msgstr "Hem detectat que heu afegit alguns dissenys de l’Executor del Lloc o d
 msgid "Keep styles?"
 msgstr "Voleu conservar els estils?"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask your WordPress question…"
 msgstr "Feu la vostra pregunta sobre WordPress…"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask me any questions about WordPress."
 msgstr "Feu-me qualsevol pregunta sobre WordPress."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hi there!"
 msgstr "Hola!"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask Another Question"
 msgstr "Feu una altra pregunta"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Oops! We were unable to send your question."
 msgstr "Vaja... No s’ha pogut enviar la vostra pregunta."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Please try again."
 msgstr "Torneu-ho a provar."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "AI Chat"
 msgstr "Xat d’IA"
 
@@ -1109,17 +1109,17 @@ msgstr "Passos Visita Guiada"
 msgid "Tour"
 msgstr "Visita Guiada"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Open for new pages"
 msgstr "Obriu per a pàgines noves"
 
 #. translators: %s: Extendify Library term
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Toggle %s on new pages"
 msgstr "Premeu %s a les pàgines noves"
 
 #: public/build/extendify-launch-212984cb421fda132721.js:3
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Search for your business type"
 msgstr "Cerca el teu tipus de negoci"
 
@@ -1428,7 +1428,7 @@ msgstr "Premeu per seleccionar"
 msgid "Just a moment, this is taking longer than expected."
 msgstr "Només un moment, està trigant més del que s’esperava."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Library"
 msgstr "Biblioteca de dissenys"
 
@@ -1490,7 +1490,7 @@ msgstr "Mostra-ho tot"
 msgid "Design"
 msgstr "Disseny"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Close"
 msgstr "Tanca"
 
@@ -1509,7 +1509,7 @@ msgstr "Configuració"
 msgid "Search"
 msgstr "Cerca"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type"
 msgstr "Tipus de lloc"
 

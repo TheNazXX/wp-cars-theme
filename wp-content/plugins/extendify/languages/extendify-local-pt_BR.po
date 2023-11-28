@@ -13,45 +13,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: GlotPress/4.0.0-alpha.11\n"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Pattern added"
 msgstr "Padrão adicionado"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Design Patterns"
 msgstr "Padrões de design"
 
 #. translators: %s is the site type name
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type: %s"
 msgstr "Tipo de site: %s"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Fetching..."
 msgstr "Buscando..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Retrying..."
 msgstr "Tentando novamente..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "All"
 msgstr "Todos"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Type"
 msgstr "Tipo de design"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading more patterns..."
 msgstr "Carregando mais padrões..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading Patterns..."
 msgstr "Carregando padrões..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Insert Pattern"
 msgstr "Inserir Padrão"
 
@@ -64,18 +64,18 @@ msgstr "Configurações de usuário da biblioteca Extendify"
 msgid "In order to use the AI-powered content drafting tool, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Para usar a ferramenta de redação de conteúdo alimentada por IA, você deve concordar com os termos de uso. Para mais informações, clique neste link:"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Accept"
 msgstr "Aceitar"
 
 #. translators: at the end of the sentence, there is a link to the terms of use
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 msgid "In order to use the AI-powered chatbot to answer your WordPress questions, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Para usar o chatbot alimentado por IA para responder às suas perguntas sobre WordPress, você deve concordar com os termos de uso. Para mais informações, clique neste link:"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:1
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Terms of Use"
@@ -272,47 +272,47 @@ msgstr "Escreva um esboço para"
 msgid "Write a blog post about"
 msgstr "Escreva um post de blog sobre"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "For other questions, visit our support page."
 msgstr "Para outras perguntas, visite nossa página de suporte."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hide the chat bot"
 msgstr "Ocultar o bot de chat"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "WordPress Comfort Level"
 msgstr "Nível de Conforto com WordPress"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Recent History"
 msgstr "Histórico recente"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Advanced"
 msgstr "Avançado"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Intermediate"
 msgstr "Intermediário"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Beginner"
 msgstr "Iniciante"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was not helpful"
 msgstr "Avalie que esta resposta não foi útil"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was helpful"
 msgstr "Avalie se essa resposta foi útil"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Remove rating"
 msgstr "Remover avaliação"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Enable the AI Chatbot"
 msgstr "Ative o Chatbot de IA"
 
@@ -332,31 +332,31 @@ msgstr "Detectamos que você adicionou alguns designs do Site Launcher ou da Bib
 msgid "Keep styles?"
 msgstr "Manter estilos?"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask your WordPress question…"
 msgstr "Faça sua pergunta sobre o WordPress..."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask me any questions about WordPress."
 msgstr "Me faça qualquer pergunta a respeito do WordPress."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hi there!"
 msgstr "Olá!"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask Another Question"
 msgstr "Fazer Outra Pergunta"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Oops! We were unable to send your question."
 msgstr "Ops! Não conseguimos enviar a sua pergunta."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Please try again."
 msgstr "Por favor, tente novamente."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "AI Chat"
 msgstr "Chat IA"
 
@@ -1109,17 +1109,17 @@ msgstr "Passos do Tour"
 msgid "Tour"
 msgstr "Tour"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Open for new pages"
 msgstr "Aberto para novas páginas"
 
 #. translators: %s: Extendify Library term
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Toggle %s on new pages"
 msgstr "Alternar %s nas novas páginas"
 
 #: public/build/extendify-launch-212984cb421fda132721.js:3
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Search for your business type"
 msgstr "Pesquise o tipo do seu negócio"
 
@@ -1428,7 +1428,7 @@ msgstr "Clique para selecionar"
 msgid "Just a moment, this is taking longer than expected."
 msgstr "Só um momento, isto está demorando mais do que o esperado."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Library"
 msgstr "Biblioteca de Design"
 
@@ -1490,7 +1490,7 @@ msgstr "Mostrar todos"
 msgid "Design"
 msgstr "Design"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Close"
 msgstr "Fechar"
 
@@ -1509,7 +1509,7 @@ msgstr "Configurações"
 msgid "Search"
 msgstr "Pesquisar"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type"
 msgstr "Tipo de site"
 

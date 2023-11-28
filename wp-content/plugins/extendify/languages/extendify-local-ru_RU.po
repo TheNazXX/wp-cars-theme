@@ -13,45 +13,45 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
 "X-Generator: GlotPress/4.0.0-alpha.11\n"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Pattern added"
 msgstr "Паттерн добавлен"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Design Patterns"
 msgstr "Паттерны дизайна"
 
 #. translators: %s is the site type name
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type: %s"
 msgstr "Тип сайта: %s"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Fetching..."
 msgstr "Получение данных..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Retrying..."
 msgstr "Повторная попытка..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "All"
 msgstr "Все"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Type"
 msgstr "Тип дизайна"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading more patterns..."
 msgstr "Загрузка дополнительных паттернов..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading Patterns..."
 msgstr "Загрузка паттернов..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Insert Pattern"
 msgstr "Вставить паттерн"
 
@@ -64,18 +64,18 @@ msgstr "Настройки пользователя библиотеки Extendi
 msgid "In order to use the AI-powered content drafting tool, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Чтобы использовать инструмент для создания контента на базе ИИ, вы должны согласиться с условиями использования. Для получения дополнительной информации нажмите на эту ссылку:"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Accept"
 msgstr "Принять"
 
 #. translators: at the end of the sentence, there is a link to the terms of use
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 msgid "In order to use the AI-powered chatbot to answer your WordPress questions, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Чтобы использовать чат-бота на базе ИИ для ответов на ваши вопросы о WordPress, вы должны согласиться с условиями использования. Для получения дополнительной информации нажмите на эту ссылку:"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:1
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Terms of Use"
@@ -272,47 +272,47 @@ msgstr "Составить план для"
 msgid "Write a blog post about"
 msgstr "Написать запись в блоге о"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "For other questions, visit our support page."
 msgstr "Для других вопросов посетите нашу страницу поддержки."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hide the chat bot"
 msgstr "Скрыть чат-бота"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "WordPress Comfort Level"
 msgstr "Уровень комфорта WordPress"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Recent History"
 msgstr "Недавняя история"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Advanced"
 msgstr "Расширенные"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Intermediate"
 msgstr "Промежуточный"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Beginner"
 msgstr "Начинающий"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was not helpful"
 msgstr "Оцените, насколько этот ответ был не полезен"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was helpful"
 msgstr "Оцените полезность этого ответа"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Remove rating"
 msgstr "Удалить рейтинг"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Enable the AI Chatbot"
 msgstr "Активировать чат-бота на ИИ"
 
@@ -332,31 +332,31 @@ msgstr "Мы обнаружили, что вы добавили некоторы
 msgid "Keep styles?"
 msgstr "Сохранить стили?"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask your WordPress question…"
 msgstr "Задайте свой вопрос о WordPress…"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask me any questions about WordPress."
 msgstr "Задайте мне любые вопросы о WordPress."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hi there!"
 msgstr "Привет!"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask Another Question"
 msgstr "Задать другой вопрос"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Oops! We were unable to send your question."
 msgstr "Ой! Нам не удалось отправить ваш вопрос."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Please try again."
 msgstr "Пожалуйста, попробуйте ещё раз."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "AI Chat"
 msgstr "Чат с ИИ"
 
@@ -1109,17 +1109,17 @@ msgstr "Шаги тура"
 msgid "Tour"
 msgstr "Тур"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Open for new pages"
 msgstr "Открыть для новых страниц"
 
 #. translators: %s: Extendify Library term
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Toggle %s on new pages"
 msgstr "Переключить %s на новых страницах"
 
 #: public/build/extendify-launch-212984cb421fda132721.js:3
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Search for your business type"
 msgstr "Поиск вашего типа бизнеса"
 
@@ -1428,7 +1428,7 @@ msgstr "Нажмите для выбора"
 msgid "Just a moment, this is taking longer than expected."
 msgstr "Минуточку, это занимает больше времени, чем ожидалось."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Library"
 msgstr "Библиотека дизайнов"
 
@@ -1490,7 +1490,7 @@ msgstr "Показать все"
 msgid "Design"
 msgstr "Дизайн"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Close"
 msgstr "Закрыть"
 
@@ -1509,7 +1509,7 @@ msgstr "Настройки"
 msgid "Search"
 msgstr "Поиск"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type"
 msgstr "Тип сайта"
 

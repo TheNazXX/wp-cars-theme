@@ -95,7 +95,7 @@ class Admin
     {
         $userInfo = \get_user_option('extendify_library_user');
         $hasPartner = PartnerData::$id && PartnerData::$id !== 'no-partner';
-        $userInfo = $userInfo ? $userInfo : [
+        $userInfo = $userInfo ? json_decode($userInfo, true) : [
             'state' => ['openOnNewPage' => $hasPartner],
             'version' => 0,
         ];

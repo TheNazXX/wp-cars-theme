@@ -78,14 +78,49 @@ class Admin
     {
         \add_action(
             'admin_enqueue_scripts',
-            function () {
+            function ($hook) {
                 if (!current_user_can(Config::$requiredCapability)) {
                     return;
                 }
 
-                // Don't load on the update page (update-core is ok).
-                $currentScreen = get_current_screen();
-                if ($currentScreen && $currentScreen->id === 'update') {
+                $allowedScreens = [
+                    'dashboard',
+                    'edit',
+                    'edit-comments',
+                    'edit-tags',
+                    'edit-page',
+                    'erase-personal-data',
+                    'export',
+                    'export-personal-data',
+                    'import',
+                    'index',
+                    'media-new',
+                    'options-discussion',
+                    'options-general',
+                    'options-media',
+                    'options-permalink',
+                    'options-privacy',
+                    'options-reading',
+                    'options-writing',
+                    'plugins',
+                    'plugin-install',
+                    'profile',
+                    'site-health',
+                    'themes',
+                    'tools',
+                    'users',
+                    'user-new',
+                    'update-core',
+                    'upload',
+                    'page_extendify-assist',
+                ];
+
+                // Check if any of our allowed screens show up in the $hook.
+                // Don't use an exact match as WP may prepend a locale string.
+                $hasAllowedScreen = array_filter($allowedScreens, function ($screen) use ($hook) {
+                    return strpos($hook, $screen) !== false;
+                });
+                if (!$hasAllowedScreen) {
                     return;
                 }
 

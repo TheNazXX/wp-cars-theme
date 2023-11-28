@@ -13,45 +13,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: GlotPress/4.0.0-alpha.11\n"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Pattern added"
 msgstr "Pola ditambahkan"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Design Patterns"
 msgstr "Pola Desain"
 
 #. translators: %s is the site type name
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type: %s"
 msgstr "Tipe Situs: %s"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Fetching..."
 msgstr "Mengambil..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Retrying..."
 msgstr "Mencoba lagi..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "All"
 msgstr "Semua"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Type"
 msgstr "Jenis Desain"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading more patterns..."
 msgstr "Memuat lebih banyak pola..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Loading Patterns..."
 msgstr "Memuat Pola..."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Insert Pattern"
 msgstr "Sisipkan Pola"
 
@@ -64,18 +64,18 @@ msgstr "Pengaturan Pengguna Perpustakaan Extendify"
 msgid "In order to use the AI-powered content drafting tool, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Untuk menggunakan alat penyusunan konten yang ditenagai AI, Anda harus menyetujui ketentuan penggunaan. Untuk informasi lebih lanjut, klik tautan ini"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Accept"
 msgstr "Terima"
 
 #. translators: at the end of the sentence, there is a link to the terms of use
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 msgid "In order to use the AI-powered chatbot to answer your WordPress questions, you must agree to the terms of use. For more information, click on this link:"
 msgstr "Untuk menggunakan chatbot yang ditenagai AI untuk menjawab pertanyaan WordPress Anda, Anda harus menyetujui ketentuan penggunaan. Untuk informasi lebih lanjut, klik tautan ini"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:3
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:3
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:1
 #: public/build/extendify-draft-1df8cf14bcaf18ad6815.js:3
 msgid "Terms of Use"
@@ -272,47 +272,47 @@ msgstr "Tulis garis besar untuk"
 msgid "Write a blog post about"
 msgstr "Tulis artikel blog tentang"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "For other questions, visit our support page."
 msgstr "Untuk pertanyaan lainnya, kunjungi laman dukungan kami."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hide the chat bot"
 msgstr "Sembunyikan bot chat"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "WordPress Comfort Level"
 msgstr "Tingkat Kenyamanan WordPress"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Recent History"
 msgstr "Riwayat Terkini"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Advanced"
 msgstr "Lanjutan"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Intermediate"
 msgstr "Menengah"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Beginner"
 msgstr "Pemula"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was not helpful"
 msgstr "Beri nilai bahwa jawaban ini tidak membantu"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Rate that this answer was helpful"
 msgstr "Beri nilai bahwa jawaban ini bermanfaat"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Remove rating"
 msgstr "Hapus peringkat"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Enable the AI Chatbot"
 msgstr "Aktifkan AI Chatbot"
 
@@ -332,31 +332,31 @@ msgstr "Kami mendeteksi bahwa Anda telah menambahkan beberapa desain dari Site L
 msgid "Keep styles?"
 msgstr "Pertahankan gaya?"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask your WordPress question…"
 msgstr "Tanyakan pertanyaan anda mengenai WordPress…"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask me any questions about WordPress."
 msgstr "Tanyakan saya pertanyaan apa saja mengenai WordPress"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Hi there!"
 msgstr "Halo!"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Ask Another Question"
 msgstr "Tanyakan pertanyaan lain"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Oops! We were unable to send your question."
 msgstr "Ooops!, Kita tidak dapat mengirim pertanyaan anda."
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "Please try again."
 msgstr "Silakan mencoba kembali"
 
-#: public/build/extendify-chat-2c3d645ce470e493c003.js:1
+#: public/build/extendify-chat-0f8df5eeca5f4142c820.js:1
 msgid "AI Chat"
 msgstr "AI Chat"
 
@@ -1109,17 +1109,17 @@ msgstr "Langkah-langkah"
 msgid "Tour"
 msgstr "Tutorial"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Open for new pages"
 msgstr "Buka Halaman Baru"
 
 #. translators: %s: Extendify Library term
-#: public/build/extendify-library-5956af9ed09405b07c94.js:5
+#: public/build/extendify-library-b89e3a16523eae245abf.js:5
 msgid "Toggle %s on new pages"
 msgstr "Beralih %s dalam Halaman baru"
 
 #: public/build/extendify-launch-212984cb421fda132721.js:3
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Search for your business type"
 msgstr "Cari jenis bisnis Anda"
 
@@ -1428,7 +1428,7 @@ msgstr "Tekan untuk pilih"
 msgid "Just a moment, this is taking longer than expected."
 msgstr "Mohon menunggu, ini perlu Waktu lebih Panjang dari biasanya."
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:1
+#: public/build/extendify-library-b89e3a16523eae245abf.js:1
 msgid "Design Library"
 msgstr "Perpustakaan Desain"
 
@@ -1490,7 +1490,7 @@ msgstr "LIhat Semua"
 msgid "Design"
 msgstr "Desain"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Close"
 msgstr "Tutup"
 
@@ -1509,7 +1509,7 @@ msgstr "Pengaturan"
 msgid "Search"
 msgstr "Cari"
 
-#: public/build/extendify-library-5956af9ed09405b07c94.js:3
+#: public/build/extendify-library-b89e3a16523eae245abf.js:3
 msgid "Site Type"
 msgstr "Tipe Website"
 

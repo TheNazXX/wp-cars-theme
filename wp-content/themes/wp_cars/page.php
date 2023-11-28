@@ -7,7 +7,7 @@
     <?php
 		while ( have_posts() ) :
 			the_post();
-
+			
 			get_template_part('partials/content', 'page');  
 
 			wp_link_pages();

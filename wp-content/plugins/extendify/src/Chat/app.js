@@ -3,6 +3,7 @@ import { Chat } from '@chat/Chat';
 import './app.css';
 
 requestAnimationFrame(() => {
+	if (window.parent !== window) return;
 	const chat = Object.assign(document.createElement('div'), {
 		className: 'extendify-chat',
 	});

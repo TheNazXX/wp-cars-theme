@@ -28,9 +28,15 @@ export const usePreviewIframe = ({
 			for (let key in requiredCSSVars) {
 				// CSS variable was found applied somewhere
 				if (styles.getPropertyValue(key)) continue;
-				const varUsed = Array.from(styleSheets).some((sheet) =>
-					hasCSSVar(key, sheet.cssRules),
-				);
+				const varUsed = Array.from(styleSheets)
+					.filter((sheet) => {
+						try {
+							return sheet.cssRules;
+						} catch (error) {
+							return false;
+						}
+					})
+					.some((sheet) => hasCSSVar(key, sheet.cssRules));
 				// CSS variable was found in a stylesheet somewhere
 				if (varUsed) continue;
 
