@@ -1,7 +1,7 @@
 <?php 
 
 // свой класс построения меню:
-class Useful_Likns_Walker_Nav_Menu extends Walker_Nav_Menu {
+class Useful_Links_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 	// add classes to ul sub-menus
 	function start_lvl( &$output, $depth = 0, $args = NULL ) {

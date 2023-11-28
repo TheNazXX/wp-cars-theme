@@ -16,6 +16,6 @@
         <span><?php esc_html_e(get_post_meta(get_the_ID(), 'wp_cars_unit', true)); ?></span>
       </div>
     </div>
-    <a class="btn btn-primary px-3" href="">$99.00/Day</a>
+    <a class="btn btn-primary px-3" href=<?php the_permalink()?>>$99.00/Day</a>
   </div>
 </div>

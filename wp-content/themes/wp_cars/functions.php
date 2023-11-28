@@ -121,6 +121,7 @@ function geniuscourses_enqueue_scripts(){
 	wp_enqueue_style('geniuscourses-bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(), '1.0', 'all');
 	wp_enqueue_style('geniuscourses-style', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');
 	wp_enqueue_style('geniuscourses-general', get_template_directory_uri().'/assets/css/general.css', array(), '1.0', 'all');
+	wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
 
 	wp_enqueue_script('bootstrap.bundle', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('easing', get_template_directory_uri().'/assets/js/lib/easing/easing.min.js', array('jquery'), '1.0', true);
@@ -129,7 +130,9 @@ function geniuscourses_enqueue_scripts(){
 	wp_enqueue_script('moment', get_template_directory_uri().'/assets/js/lib/moment.min.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('moment-timezone', get_template_directory_uri().'/assets/js/lib/tempusdominus/js/moment-timezone.min.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('tempusdominus-bootstrap-4', get_template_directory_uri().'/assets/js/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js', array('jquery'), '1.0', true);
+
 	wp_enqueue_script('geniuscourses-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '1.0', true);
+	wp_localize_script('geniuscourses-main', 'ajax_object', array('ajax_url' => admin_url('admin-ajax.php')));
 	
 	wp_enqueue_style('geniuscourses-fonts', gc_fonts_url(), array(), '1.0');
 	
@@ -224,7 +227,16 @@ function geniuscourses_theme_init(){
 			'quote',
 			'image',
 			'gallery'
-		));
+		)
+	);
+
+	add_theme_support('custom-logo',
+		array(
+			'width' => '130',
+			'height' => '50'
+		)
+	);
+
 	add_post_type_support('car','post-formats');
 
 }
@@ -320,3 +332,24 @@ function gc_posts_per_page($query){
 	}
 }
 add_action('pre_get_posts','gc_posts_per_page');
+
+
+function load_content() {
+	$link = esc_url($_POST['link']); // Получаем адрес ссылки
+
+	// Получаем куки текущего пользователя
+	$user_cookies = $_COOKIE;
+
+	// Загружаем содержимое страницы с куками
+	$response = wp_remote_get($link, array(
+		'cookies' => $user_cookies,
+	));
+
+	// Возвращаем содержимое
+	echo wp_remote_retrieve_body($response);
+
+	wp_die();
+}
+
+add_action('wp_ajax_nopriv_load_content', 'load_content');
+add_action('wp_ajax_load_content', 'load_content');

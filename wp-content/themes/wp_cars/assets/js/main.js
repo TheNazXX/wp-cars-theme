@@ -70,7 +70,46 @@
             }
         }
     });
+
+    $('#menu-header-menu').on('click', 'a', onChagenPage);
+
+    function onChagenPage(e){
+        e.preventDefault(); // Предотвращаем обычное поведение
+        if(!$(e.currentTarget).attr('aria-current')){
+            let link = $(this).attr('href'); // Получаем адрес ссылки
+            disabledBody(true);
+            $('body').append('<div class="loader-wrap animate__animated animate__fadeIn"><div class="loader"></div></div>');
+            // Отправляем AJAX-запрос
+            ajaxRequest(link);
+        }
+    };
+
+    function ajaxRequest(link){
+        $.ajax({
+            type: 'POST',
+            url: ajax_object.ajax_url,
+            data: { action: 'load_content', link},
+            success: function (response) {
+                // Обновляем контент
+                $('body').html(response);
+            },
+            complete: function () {
+                // Скрываем лоадер после завершения запроса
+                $('.loader-wrap').remove();
+                $('body').off('click', onChagenPage);
+                disabledBody(false);
+            }
+        });
+    }
+
+    function disabledBody(flag){
+        $('body').css('overflow-y', flag ? 'hidden' : 'auto');
+    }
+
+
 })(jQuery);
+
+
 
 
 

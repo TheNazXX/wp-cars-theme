@@ -41,7 +41,7 @@
                 'echo' => false,
                 'depth' => 0,
                 'items_wrap' => '<div id="%1$s" class="%2$s">%3$s</div>',
-                'walker' => new Useful_Likns_Walker_Nav_Menu()
+                'walker' => new Useful_Links_Walker_Nav_Menu()
             ]
             ) ?>
       </div>
@@ -49,7 +49,7 @@
     <div class="col-lg-3 col-md-6 mb-5">
       <h4 class="text-uppercase text-light mb-4">
         <?php esc_html_e(($cars_options['title_three']) ? $cars_options['title_three'] : 'Car gallery') ?></h4>
-      <div class="row mx-n1">
+      <!-- <div class="row mx-n1">
         <div class="col-4 px-1 mb-2">
           <a href=""><img class="w-100" src="img/gallery-1.jpg" alt=""></a>
         </div>
@@ -68,7 +68,7 @@
         <div class="col-4 px-1 mb-2">
           <a href=""><img class="w-100" src="img/gallery-6.jpg" alt=""></a>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="col-lg-3 col-md-6 mb-5">
       <h4 class="text-uppercase text-light mb-4">

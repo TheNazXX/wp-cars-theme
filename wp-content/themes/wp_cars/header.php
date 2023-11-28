@@ -76,7 +76,9 @@
     <div class="position-relative px-lg-5" style="z-index: 9;">
       <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
         <a href="<?php echo esc_url(home_url('/'));?>" class="navbar-brand">
-          <h1 class="text-uppercase text-primary mb-1"><?php bloginfo('name'); ?></h1>
+          <h1 class="text-uppercase text-primary mb-1"><?php if(has_custom_logo()){
+            echo get_custom_logo();
+          } ?><?php bloginfo('name'); ?></h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
@@ -101,7 +103,7 @@
         $bg_img = (get_the_post_thumbnail_url(get_the_id(), 'full')) ? get_the_post_thumbnail_url(get_the_id(), 'full') : $cars_options['main_banner']['url']; 
     ?>
 
-  <div class="container-fluid page-header page-banner"
+  <div class="container-fluid page-header page-banner animate__animated animate__fadeIn"
     style="background-image: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)) , url('<?php echo $bg_img; ?>');">
     <h1 class="display-3 text-uppercase text-white mb-3"><?php wp_title(""); ?></h1>
   </div>
