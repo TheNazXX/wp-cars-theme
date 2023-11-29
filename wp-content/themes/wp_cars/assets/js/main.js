@@ -71,12 +71,24 @@
         }
     });
 
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+
+ 
     $('#menu-header-menu').on('click', 'a', onChagenPage);
 
     function onChagenPage(e){
-        e.preventDefault(); // Предотвращаем обычное поведение
         if(!$(e.currentTarget).attr('aria-current')){
             let link = $(this).attr('href'); // Получаем адрес ссылки
+            console.log(link);
             disabledBody(true);
             $('body').append('<div class="loader-wrap animate__animated animate__fadeIn"><div class="loader"></div></div>');
             // Отправляем AJAX-запрос
@@ -105,6 +117,24 @@
     function disabledBody(flag){
         $('body').css('overflow-y', flag ? 'hidden' : 'auto');
     }
+
+    let typedInstance; 
+
+    $('.property-card').hover(
+        function(){
+            typedInstance = new Typed($('#typed-output', $(this))[0], {
+                strings: [$('#typed-input', $(this)).text()],
+                typeSpeed: 10,
+                showCursor: false
+            });
+        },
+
+        function(){
+            if (typedInstance) {
+                typedInstance.destroy();
+            }
+        }
+    )
 
 
 })(jQuery);
