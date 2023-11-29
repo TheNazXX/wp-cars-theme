@@ -23,23 +23,18 @@ if(!defined('ABSPATH')){
 
 class thenaz_plugin
 {
-
-
   static function activation(){
-    flush_rewrite_rules(); // Функия для обновления информации в бд чтобы ссылки на пост тайпы работали.
+    flush_rewrite_rules(); // Функция для обновления информации в бд чтобы ссылки на пост тайпы работали.
   }
-
 
   static function deactivation(){
     flush_rewrite_rules();
   }
-
 }
 
 if(class_exists('thenaz_plugin')){
   $thenaz_plugin = new thenaz_plugin();
 }
-
 
 
 register_activation_hook(__FILE__, [$thenaz_plugin, 'activation']);
