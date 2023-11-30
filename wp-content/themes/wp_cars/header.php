@@ -100,7 +100,7 @@
 
   <?php if (!is_front_page()): ?>
   <?php 
-        $bg_img = (get_the_post_thumbnail_url(get_the_id(), 'full')) ? get_the_post_thumbnail_url(get_the_id(), 'full') : $cars_options['main_banner']['url']; 
+        $bg_img = (get_the_post_thumbnail_url(get_the_id(), 'full') && is_singular()) ? get_the_post_thumbnail_url(get_the_id(), 'full') : $cars_options['main_banner']['url']; 
     ?>
 
   <div class="container-fluid page-header page-banner animate__animated animate__fadeIn"

@@ -33,7 +33,7 @@ if(!class_exists('thenaz_Custom_Post_Types')){
     echo '
     <p>
       <label for="property_price">Price</label>
-      <input type="text" id="property_price" name="property_price" value="'. esc_html($price) .'">   
+      <input type="number" id="property_price" name="property_price" value="'. esc_html($price) .'">   
     </p>
 
     <p>

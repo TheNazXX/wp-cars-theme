@@ -124,7 +124,7 @@
         function(){
             typedInstance = new Typed($('#typed-output', $(this))[0], {
                 strings: [$('#typed-input', $(this)).text()],
-                typeSpeed: 10,
+                typeSpeed: 15,
                 showCursor: false
             });
         },

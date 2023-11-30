@@ -3,66 +3,70 @@
  get_header();
   
 ?>
+
 <div class="container-lg-c">
+
+  <?php $thenazTempalteLoader->get_template_part('parts/filter')?>
+
   <div class="swiper mySwiper fade-side">
     <div class="swiper-wrapper">
 
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <?php $locations = get_the_terms(get_the_ID(), 'location') ?>
+      <?php 
+      
+      if(!empty($_POST['submit'])){
+
+        $args = [
+          'post_type' => 'property',
+          'posts_per_page' => -1,
+          'meta_query' => ['relation' => 'AND'],
+          'tax_query' => ['relation' => 'AND']
+        ];
+
+        if(isset($_POST['thenaz_type']) && $_POST['thenaz_type'] != ''){
+          array_push($args['meta_query'], [
+            'key' => 'property_type',
+            'value' => esc_attr($_POST['thenaz_type'])
+          ]);
+        }
+
+        if(isset($_POST['thenaz_price']) && $_POST['thenaz_price'] != ''){
+          array_push($args['meta_query'], [
+            'key' => 'property_price',
+            'value' => esc_attr($_POST['thenaz_price']),
+            'type' => 'numeric',
+            'compare' => '<='
+          ]);
+        }
+        
+        
+        $properties = new WP_Query($args);
+
+        ?>
+
+      <?php if ( $properties->have_posts() ) : while ( $properties->have_posts() ) : $properties->the_post(); ?>
       <div class="swiper-slide">
-        <article id='post-<?php echo the_ID()?>' <?php post_class()?>>
-          <div class="property-card">
-            <div class="property-image">
-              <?php echo get_the_post_thumbnail() ?>
-            </div>
-            <div class="property-details">
-              <div class="d-flex flex-row justify-content-between align-items-center">
-                <h3 class="mr-2"><?php esc_html_e(the_title()); ?></h3>
-
-
-                <?php if($locations): ?>
-                <div><strong>Locations:</strong>
-                  <?php foreach($locations as $location){ ?>
-                  <a href="<?php echo esc_url(get_term_link($location))?>"><?php esc_html_e($location->name); ?></a>
-                  <?php } ?>
-                </div>
-                <?php endif; ?>
-
-              </div>
-              <p class="price"><strong style="color: black">Price:</strong>
-                $<?php esc_html_e(get_post_meta(get_the_ID(), 'property_price', true)); ?>
-              </p>
-              <p class="period"><strong style="color: black">Period:
-                  &nbsp;</strong><?php esc_html_e(get_post_meta(get_the_ID(), 'property_period', true)); ?>
-              </p>
-
-              <p class="type"><strong style="color: black">Type:
-                  &nbsp;</strong><?php esc_html_e(get_post_meta(get_the_ID(), 'property_type', true)); ?></p>
-
-
-              <p class="type"><strong style="color: black">Agent:
-                  &nbsp;</strong><?php echo get_post(get_post_meta(get_the_ID(), 'property_agent', true))->post_title; ?>
-              </p>
-
-
-
-              <div class="property-details-description">
-                <span id="typed-output"></span>
-                <div id="typed-input"><?php the_content()?></div>
-              </div>
-            </div>
-
-            <div class='d-flex justify-content-end'>
-              <a href="<?php the_permalink()?>" class="btn btn-secondary">More</a>
-            </div>
-
-          </div>
-        </article>
+        <?php $thenazTempalteLoader->get_template_part('parts/content')?>
       </div>
 
       <?php endwhile; else : ?>
       <?php echo 'Sorry, no posts were found.'; ?>
       <?php endif; ?>
+
+      <?php 
+
+        
+      } else { ?>
+
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <div class="swiper-slide">
+        <?php $thenazTempalteLoader->get_template_part('parts/content')?>
+      </div>
+
+      <?php endwhile; else : ?>
+      <?php echo 'Sorry, no posts were found.'; ?>
+      <?php endif; ?>
+
+      <?php } ?>
 
 
     </div>
