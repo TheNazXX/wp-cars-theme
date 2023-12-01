@@ -152,11 +152,11 @@ if(!class_exists('thenaz_Custom_Post_Types')){
     ]);
 
     register_taxonomy('location', 'property', [
-      'hierarchicle' => true, // Включает древовиднную систему
+      'hierarchical' => true, // Включает древовиднную систему
       'show_ui' => true,
       'show_admin_column' => true,
       'query_var' => true,
-      'rewire' => ['slug' => 'properties/location'],
+      'rewrite' => ['slug' => 'properties/location'],
       'labels' => [
         'name'              => esc_html_x( 'Location', 'taxonomy general name', 'thenaz' ),
         'singular_name'     => esc_html_x( 'Location', 'taxonomy singular name', 'thenaz' ),
@@ -173,11 +173,11 @@ if(!class_exists('thenaz_Custom_Post_Types')){
     ]);
 
     register_taxonomy('property-type', 'property', [
-      'hierarchicle' => true, // Включает древовиднную систему
+      'hierarchical' => true, // Включает древовиднную систему
       'show_ui' => true,
       'show_admin_column' => true,
       'query_var' => true,
-      'rewire' => ['slug' => 'properties/type'],
+      'rewrite' => ['slug' => 'properties/type'],
       'labels' => [
         'name'              => esc_html_x( 'Type', 'taxonomy general name', 'thenaz' ),
         'singular_name'     => esc_html_x( 'Type', 'taxonomy singular name', 'thenaz' ),

@@ -1,4 +1,20 @@
-<?php $locations = get_the_terms(get_the_ID(), 'location') ?>
+<?php 
+
+  $taxonomies = wp_get_post_terms(get_the_ID(), ['location', 'property-type']);
+  $terms_by_taxonomies = [];
+
+  foreach($taxonomies as $term){
+    $taxonomy = $term->taxonomy;
+
+    if(!isset($terms_by_taxonomies[$taxonomy])){
+      $terms_by_taxonomies[$taxonomy] = [];
+    }
+
+    $terms_by_taxonomies[$taxonomy][] = $term;
+  };
+
+?>
+
 
 <article id='post-<?php echo the_ID()?>' <?php post_class()?>>
   <div class="property-card">
@@ -9,14 +25,36 @@
       <div class="d-flex flex-row justify-content-between align-items-center">
         <h3 class="mr-2"><?php esc_html_e(the_title()); ?></h3>
 
+        <?php if($terms_by_taxonomies): ?>
 
-        <?php if($locations): ?>
-        <div><strong>Locations:</strong>
-          <?php foreach($locations as $location){ ?>
-          <a href="<?php echo esc_url(get_term_link($location))?>"><?php esc_html_e($location->name); ?></a>
-          <?php } ?>
+        <div>
+
+          <?php if($terms_by_taxonomies['location']): ?>
+
+          <div><strong>Locations:</strong>
+            <?php foreach($terms_by_taxonomies['location'] as $location){ ?>
+            <a href="<?php echo esc_url(get_term_link($location))?>"><?php esc_html_e($location->name); ?></a>
+            <?php } ?>
+          </div>
+
+          <?php endif; ?>
+
+
+
+          <?php if($terms_by_taxonomies['property-type']): ?>
+
+          <div><strong>Type House:</strong>
+            <?php foreach($terms_by_taxonomies['property-type'] as $type){ ?>
+            <a href="<?php echo esc_url(get_term_link($type))?>"><?php esc_html_e($type->name); ?></a>
+            <?php } ?>
+          </div>
+
+          <?php endif; ?>
+
         </div>
+
         <?php endif; ?>
+
 
       </div>
       <p class="price"><strong style="color: black">Price:</strong>
