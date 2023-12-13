@@ -1,4 +1,8 @@
 import {
+	BusinessInformation,
+	state as businessInfoState,
+} from '@launch/pages/BusinessInformation';
+import {
 	Goals,
 	goalsFetcher,
 	goalsParams as goalsData,
@@ -70,6 +74,13 @@ const defaultPages = [
 			fetcher: pagesSelectFetcher,
 			fetchData: pagesSelectData,
 			state: pagesSelectState,
+		},
+	],
+	[
+		'business-information',
+		{
+			component: BusinessInformation,
+			state: businessInfoState,
 		},
 	],
 ];

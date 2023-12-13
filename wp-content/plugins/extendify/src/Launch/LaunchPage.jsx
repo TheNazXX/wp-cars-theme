@@ -105,7 +105,7 @@ export const LaunchPage = () => {
 				className="h-screen w-screen fixed inset-0 overflow-y-auto md:overflow-hidden bg-white">
 				{page()}
 			</div>
-			{retrying && <RetryNotice />}
+			<RetryNotice show={retrying} />
 		</SWRConfig>
 	);
 };

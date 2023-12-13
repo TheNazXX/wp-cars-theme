@@ -1,5 +1,5 @@
 import { useUserSelectionStore } from '@launch/state/UserSelections';
-import { PATTERNS_HOST } from '../../constants';
+import { PATTERNS_HOST, AI_HOST } from '../../constants';
 import { getHeadersAndFooters } from './WPApi';
 import { Axios as api } from './axios';
 
@@ -74,6 +74,20 @@ export const getSuggestedPlugins = async () => {
 		throw new Error('Could not get suggested plugins');
 	}
 	return suggested.data;
+};
+
+export const getPagePatternsGeneratedByAI = async (page, userState) => {
+	const res = await fetch(`${AI_HOST}/api/patterns`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({
+			page,
+			userState,
+		}),
+	});
+
+	if (!res.ok) throw new Error('Bad response from server');
+	return await res.json();
 };
 
 export const pingServer = () => api.get('launch/ping');

@@ -11,6 +11,11 @@ const initialState = {
 	siteInformation: {
 		title: undefined,
 	},
+	businessInformation: {
+		description: undefined,
+		tones: [],
+		acceptTerms: false,
+	},
 	siteTypeSearch: [],
 	// for somewhat legacy reasons, this includes the home page, header,
 	// and footer code + the style (variation)
@@ -36,6 +41,10 @@ const state = (set, get) => ({
 	setSiteInformation(name, value) {
 		const siteInformation = { ...get().siteInformation, [name]: value };
 		set({ siteInformation });
+	},
+	setBusinessInformation(name, value) {
+		const businessInformation = { ...get().businessInformation, [name]: value };
+		set({ businessInformation });
 	},
 	has(type, item) {
 		if (!item?.id) return false;

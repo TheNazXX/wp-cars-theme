@@ -12,11 +12,12 @@ import {
 	getActivePlugins,
 	prefetchAssistData,
 } from '@launch/api/WPApi';
+import { PagesSkeleton } from '@launch/components/CreatingSite/PageSkeleton';
 import { useConfetti } from '@launch/hooks/useConfetti';
 import { useWarnOnLeave } from '@launch/hooks/useWarnOnLeave';
 import { uploadLogo } from '@launch/lib/logo';
 import { waitFor200Response, wasInstalled } from '@launch/lib/util';
-import { createWordpressPages, updateGlobalStyleVariant } from '@launch/lib/wp';
+import { createPages, updateGlobalStyleVariant } from '@launch/lib/wp';
 import { useUserSelectionStore } from '@launch/state/UserSelections';
 import { Logo, Spinner } from '@launch/svg';
 
@@ -26,11 +27,21 @@ export const CreatingSite = () => {
 	const [confettiColors, setConfettiColors] = useState(['#ffffff']);
 	const [warnOnLeaveReady, setWarnOnLeaveReady] = useState(true);
 	const canLaunch = useUserSelectionStore((state) => state.canLaunch());
-	const { pages, style, plugins, goals } = useUserSelectionStore();
+	const {
+		pages,
+		style,
+		plugins,
+		goals,
+		businessInformation,
+		siteType,
+		siteInformation,
+		siteTypeSearch,
+	} = useUserSelectionStore();
 	const [info, setInfo] = useState([]);
 	const [infoDesc, setInfoDesc] = useState([]);
 	const inform = (msg) => setInfo((info) => [msg, ...info]);
 	const informDesc = (msg) => setInfoDesc((infoDesc) => [msg, ...infoDesc]);
+	const [pagesToAnimate, setPagesToAnimate] = useState([]);
 
 	useWarnOnLeave(warnOnLeaveReady);
 
@@ -39,10 +50,8 @@ export const CreatingSite = () => {
 			throw new Error(__('Site is not ready to launch.', 'extendify-local'));
 		}
 		try {
-			if (!document.body.classList.contains('folded')) {
-				window.jQuery('#collapse-button').trigger('click.collapse-menu');
-			}
-
+			await updateOption('permalink_structure', '/%postname%/');
+			await waitFor200Response();
 			inform(__('Applying your website styles', 'extendify-local'));
 			informDesc(__('Creating a beautiful website', 'extendify-local'));
 			await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -100,9 +109,26 @@ export const CreatingSite = () => {
 				name: __('Blog', 'extendify-local'),
 				patterns: [],
 			};
+
 			await waitFor200Response();
-			pageIds = await createWordpressPages([...pages, blogPage, homePage]);
+			if (businessInformation.acceptTerms) {
+				informDesc(__('Creating pages with custom content', 'extendify-local'));
+				[homePage, ...pages].forEach((page) =>
+					setPagesToAnimate((previous) => [...previous, page.name]),
+				);
+			}
+
+			pageIds = await createPages([...pages, blogPage, homePage], {
+				goals,
+				businessInformation,
+				siteType,
+				siteInformation,
+				siteTypeSearch,
+			});
+
+			setPagesToAnimate([]);
 			await waitFor200Response();
+			informDesc(__('Setting up site layout', 'extendify-local'));
 			const addBlogPageToNav = goals?.some((goal) => goal.slug === 'blog');
 
 			navPages = [...pages, addBlogPageToNav ? blogPage : null, homePage]
@@ -183,8 +209,6 @@ export const CreatingSite = () => {
 			informDesc(__('Helping you to succeed', 'extendify-local'));
 			await new Promise((resolve) => setTimeout(resolve, 1000));
 			await waitFor200Response();
-			await waitFor200Response();
-			await updateOption('permalink_structure', '/%postname%/');
 			inform(__('Your website has been created!', 'extendify-local'));
 			informDesc(__('Redirecting in 3, 2, 1...', 'extendify-local'));
 			// fire confetti here
@@ -214,7 +238,18 @@ export const CreatingSite = () => {
 			await new Promise((resolve) => setTimeout(resolve, 2000));
 			return doEverything();
 		}
-	}, [pages, plugins, style, canLaunch, goals]);
+	}, [
+		pages,
+		plugins,
+		style,
+		canLaunch,
+		goals,
+		businessInformation,
+		siteType,
+		siteInformation,
+		siteTypeSearch,
+		setPagesToAnimate,
+	]);
 
 	useEffect(() => {
 		doEverything().then(() => {
@@ -313,6 +348,9 @@ export const CreatingSite = () => {
 								}
 							})}
 						</div>
+						{pagesToAnimate.length > 0 ? (
+							<PagesSkeleton pages={pagesToAnimate} />
+						) : null}
 					</div>
 				</div>
 			</div>

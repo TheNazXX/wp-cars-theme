@@ -165,6 +165,14 @@ class Admin
             ]);
         }
 
+        $skipSteps = defined('EXTENDIFY_SKIP_STEPS') ? constant('EXTENDIFY_SKIP_STEPS') : [];
+        $partnerData = PartnerData::getPartnerData();
+        $consentTermsUrlAI = isset($partnerData['consentTermsUrl']) ? \esc_url_raw($partnerData['consentTermsUrl']) : '';
+        // Always shows on devmode, and won't show if disabled, or the consent url is missing.
+        if ((!array_key_exists('showAICopy', $partnerData) || !$consentTermsUrlAI) && Config::$environment !== 'DEVELOPMENT') {
+            $skipSteps[] = 'business-information';
+        }
+
         \wp_add_inline_script(
             Config::$slug . '-launch-scripts',
             'window.extOnbData = ' . \wp_json_encode([
@@ -180,7 +188,9 @@ class Admin
                 'nonce' => \wp_create_nonce('wp_rest'),
                 'partnerLogo' => \esc_attr(PartnerData::$logo),
                 'partnerName' => \esc_attr(PartnerData::$name),
-                'partnerSkipSteps' => defined('EXTENDIFY_SKIP_STEPS') ? constant('EXTENDIFY_SKIP_STEPS') : [],
+                'partnerId' => \esc_attr(PartnerData::$id),
+                'partnerSkipSteps' => $skipSteps,
+                'consentTermsUrlAI' => $consentTermsUrlAI,
                 'devbuild' => \esc_attr(Config::$environment === 'DEVELOPMENT'),
                 'version' => Config::$version,
                 'siteId' => \get_option('extendify_site_id', ''),

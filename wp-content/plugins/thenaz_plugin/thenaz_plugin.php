@@ -26,6 +26,8 @@ if(!defined('ABSPATH')){
 require THENAZ_PROPERTY_PATH . 'inc/class-gamajo-template-loader.php';
 require THENAZ_PROPERTY_PATH . 'inc/class-thenaz-template-loader.php';
 require THENAZ_PROPERTY_PATH . 'inc/class-custom-shortcodes.php';
+require THENAZ_PROPERTY_PATH . 'inc/class-filter-widget.php';
+require THENAZ_PROPERTY_PATH . 'inc/class-thenaz-elementor.php';
 
 class thenaz_plugin
 {
@@ -33,14 +35,16 @@ class thenaz_plugin
   public function get_terms_hierarchicle($tax_name, $current_term){
     $taxonomy_terms = get_terms($tax_name, ['hide_empty' => false, 'parent'=>0]);
 
+    $html = '';
+
     if(!empty($taxonomy_terms)){
      foreach($taxonomy_terms as $term){
       if($current_term == $term->term_id){
-        echo '<option value="' . $term->term_id . '" selected>
+        $html .= '<option value="' . $term->term_id . '" selected>
           '. $term->name .'
         </option>';
       }else{
-        echo '<option value="' . $term->term_id . '">
+        $html .= '<option value="' . $term->term_id . '">
           '. $term->name .'
         </option>';
       };
@@ -50,11 +54,11 @@ class thenaz_plugin
       if(!empty($child_terms)){
         foreach($child_terms as $child){
           if($current_term == $child->term_id){
-            echo '<option value="' . $child->term_id . '" selected>
+            $html .= '<option value="' . $child->term_id . '" selected>
               - '. $child->name .'
             </option>';
           }else{
-            echo '<option value="'  . $child->term_id . '">
+            $html .= '<option value="'  . $child->term_id . '">
                - '. $child->name .'
             </option>';
           };
@@ -62,11 +66,19 @@ class thenaz_plugin
       }
      } 
     }
+
+    return $html;
   }
 
   public function register(){
     add_action('admin_enqueue_scripts', [$this, 'enqueue_admin']);
     add_action('wp_enqueue_scripts', [$this, 'enqueue_front']);
+
+    add_action('widgets_init', [$this, 'register_widget']);
+  }
+
+  public function register_widget(){
+    register_widget('thenaz_filter_widget');
   }
 
   public function enqueue_admin(){

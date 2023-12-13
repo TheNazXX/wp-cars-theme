@@ -1,5 +1,7 @@
+import { Snackbar } from '@wordpress/components';
 import { useEffect, useState } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
+import { AnimatePresence, motion } from 'framer-motion';
 import { NavigationButton } from '@launch/components/NavigationButton';
 import { useGlobalStore } from '@launch/state/Global';
 import { usePagesStore } from '@launch/state/Pages';
@@ -125,8 +127,18 @@ const NextButton = () => {
 	const currentPageKey = Array.from(pages.keys())[currentPageIndex];
 	const pageState = pages.get(currentPageKey).state;
 	const [canProgress, setCanProgress] = useState(false);
+	const [canSkip, setCanSkip] = useState(false);
+	const [validation, setValidation] = useState({});
+	const [showValidationMessage, setShowValidationMessage] = useState(false);
 
 	const nextPageOrComplete = () => {
+		if (validation?.message) {
+			setShowValidationMessage(true);
+			const timeout = setTimeout(() => {
+				setShowValidationMessage(false);
+			}, 3000);
+			return () => clearTimeout(timeout);
+		}
 		if (canLaunch && onLastPage) {
 			useGlobalStore.setState({ generating: true });
 		} else {
@@ -135,20 +147,57 @@ const NextButton = () => {
 	};
 
 	useEffect(() => {
-		setCanProgress(pageState?.getState()?.ready);
-		return pageState.subscribe(({ ready }) => setCanProgress(ready));
+		const { ready, canSkip, validation } = pageState?.getState() || {};
+		setCanSkip(canSkip ?? false);
+		setCanProgress(ready ?? false);
+		setValidation(validation ?? {});
+		return pageState.subscribe((s) => {
+			setCanSkip(s.canSkip);
+			setCanProgress(s.ready);
+			setValidation(s.validation);
+		});
 	}, [pageState, currentPageIndex]);
 
 	return (
-		<NavigationButton
-			onClick={nextPageOrComplete}
-			disabled={!canProgress}
-			className="bg-design-main text-design-text border-design-main"
-			data-test="next-button">
-			<>
-				{__('Next', 'extendify-local')}
-				<RightCaret className="h-5 w-5 mt-px" />
-			</>
-		</NavigationButton>
+		<>
+			{canSkip ? (
+				<NavigationButton
+					onClick={() => nextPageOrComplete()}
+					data-test="back-button"
+					className="bg-white mr-2 text-design-main border-gray-200 hover:bg-gray-50 focus:bg-gray-50">
+					<>
+						{__('Skip', 'extendify-local')}
+						<RightCaret className="h-5 w-5 mt-px" />
+					</>
+				</NavigationButton>
+			) : (
+				<NavigationButton
+					onClick={nextPageOrComplete}
+					disabled={!canProgress}
+					className="bg-design-main text-design-text border-design-main"
+					data-test="next-button">
+					<>
+						{__('Next', 'extendify-local')}
+						<RightCaret className="h-5 w-5 mt-px" />
+					</>
+				</NavigationButton>
+			)}
+			<AnimatePresence>
+				{showValidationMessage && validation && (
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: 20 }}
+						className="extendify-launch w-full fixed bottom-[100px] pb-4 flex justify-end z-max">
+						<div className="shadow-2xl">
+							<Snackbar
+								actions={validation?.action ? [validation?.action] : []}>
+								{validation?.message}
+							</Snackbar>
+						</div>
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</>
 	);
 };

@@ -48,11 +48,16 @@
    
   
         if(isset($_POST['thenaz_type-house']) && $_POST['thenaz_type-house'] != ''){
-
- 
           array_push($args['tax_query'], [
             'taxonomy' => 'property-type',
             'terms' => $_POST['thenaz_type-house']
+          ]);
+        }
+        
+        if(isset($_POST['thenaz_location']) && $_POST['thenaz_location'] != ''){
+          array_push($args['tax_query'], [
+            'taxonomy' => 'location',
+            'terms' => $_POST['thenaz_location']
           ]);
         }
         

@@ -42,13 +42,6 @@ export const Header = ({
 						/>
 					</button>
 				)}
-				{!showHistory && !question && window.extAssistData?.partnerLogo && (
-					<img
-						className="h-12 w-auto"
-						src={window.extAssistData.partnerLogo}
-						alt={window.extAssistData?.partnerName || ''}
-					/>
-				)}
 				{showHistory && (
 					<div className="text-white p-2 flex items-center">
 						{__('Recent History', 'extendify-local')}

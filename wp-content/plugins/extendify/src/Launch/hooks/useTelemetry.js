@@ -56,6 +56,7 @@ export const useTelemetry = () => {
 		if (!url) return;
 		let id = 0;
 		let innerId = 0;
+		const timeout = currentPageIndex ? 1000 : 0;
 		id = window.setTimeout(() => {
 			const controller = new AbortController();
 			innerId = window.setTimeout(() => {
@@ -88,12 +89,12 @@ export const useTelemetry = () => {
 					siteTypeSearch,
 					insightsId: window.extOnbData?.siteId,
 					activeTests: JSON.stringify(window.extOnbData?.activeTests),
-					partnerName: window.extOnbData?.partnerName,
+					partnerName: window.extOnbData?.partnerId,
 					wpLanguage: window.extOnbData?.wpLanguage,
 					siteCreatedAt: window.extOnbData?.siteCreatedAt,
 				}),
 			}).catch(() => undefined);
-		}, 1000);
+		}, timeout);
 		return () => [id, innerId].forEach((i) => window.clearTimeout(i));
 	}, [
 		url,
@@ -106,5 +107,6 @@ export const useTelemetry = () => {
 		stepProgress,
 		viewedStyles,
 		siteTypeSearch,
+		currentPageIndex,
 	]);
 };

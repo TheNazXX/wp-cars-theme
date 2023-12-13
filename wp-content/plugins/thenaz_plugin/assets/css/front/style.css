@@ -102,3 +102,22 @@
   margin-bottom: 50px;
   padding: 0 25px;
 }
+
+
+.filter-form{
+  margin-bottom: 25px;
+}
+
+.filter-form form{
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.filter-form form select{
+  padding: 10px 15px;
+}
+
+.filter-form form .input-price{
+  width: 100%;
+}
