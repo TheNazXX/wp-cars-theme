@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Elementor_Properties_Widget extends \Elementor\Widget_Base {
 	
 	protected $thenazTempalteLoader;
+	protected $taxonomies = [];
 
 
 	public function get_name() {
@@ -24,7 +25,7 @@ class Elementor_Properties_Widget extends \Elementor\Widget_Base {
 
 	
 	public function get_categories() {
-		return [ 'general' ];
+		return [ 'thenaz' ];
 	}
 
 
@@ -48,6 +49,20 @@ class Elementor_Properties_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'offer',
+			[
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'label' => esc_html__( 'Choose offer', 'thenaz' ),
+				'options' => [
+					'default' => esc_html__( 'Default', 'thenaz' ),
+					'sale' => esc_html__( 'For Sale', 'thenaz' ),
+					'rent' => esc_html__( 'For Rent', 'thenaz' ),
+					'sold' => esc_html__( 'For Sold', 'thenaz' ),
+				]
+			]
+		);
+
 		$this->end_controls_section();
 
 	}
@@ -58,14 +73,31 @@ class Elementor_Properties_Widget extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 		$this->thenazTempalteLoader = new thenaz_Template_Loader();
 
-		$properties = new WP_Query([
-			'post_type' => 'property'
-		]);
+
+		foreach(get_terms('location') as $location){
+
+		};
+
+		$args = [
+			'post_type' => 'property',
+			'posts_per_page' => $settings['count'],
+			'meta_query' => ['relation'=>'AND'],
+			'tax_query' => ['relation'=>'AND']
+		];
+
+		if(isset($settings['offer']) && $settings['offer'] != 'default'){
+			array_push($args['meta_query'], [
+				'key' => 'property_type',
+				'value' => $settings['offer']
+			]);
+		};
+
+		$properties = new WP_Query($args);
 
 		?>
 
 <div class="container"></div>
-<div class="d-flex">
+<div class="d-flex justify-content-center">
 
   <?php if ( $properties->have_posts() ) : while ( $properties->have_posts() ) : $properties->the_post(); ?>
   <div class="item">

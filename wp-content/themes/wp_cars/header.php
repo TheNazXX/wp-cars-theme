@@ -105,6 +105,10 @@
 
   <div class="container-fluid page-header page-banner animate__animated animate__fadeIn"
     style="background-image: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)) , url('<?php echo $bg_img; ?>');">
-    <h1 class="display-3 text-uppercase text-white mb-3"><?php wp_title(""); ?></h1>
+    <h1 class="display-3 text-uppercase text-white mb-3">
+      <?php if(is_page('create-property') && isset($_GET['edit']) ){
+        echo 'Edit Property';
+      }else { wp_title(""); }?>
+    </h1>
   </div>
   <?php endif;?>

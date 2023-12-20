@@ -57,20 +57,35 @@
 
 
       </div>
+
+
+      <?php if(!empty(get_post_meta(get_the_ID(), 'property_price', true))){ ?>
       <p class="price"><strong style="color: black">Price:</strong>
         $<?php esc_html_e(get_post_meta(get_the_ID(), 'property_price', true)); ?>
       </p>
+      <?php } ?>
+
+
+      <?php if(!empty(get_post_meta(get_the_ID(), 'property_period', true))){ ?>
       <p class="period"><strong style="color: black">Period:
           &nbsp;</strong><?php esc_html_e(get_post_meta(get_the_ID(), 'property_period', true)); ?>
       </p>
+      <?php } ?>
 
+
+      <?php if(get_post_meta(get_the_ID(), 'property_offer', true) != 'empty'){ ?>
       <p class="type"><strong style="color: black">Type:
-          &nbsp;</strong><?php esc_html_e(get_post_meta(get_the_ID(), 'property_type', true)); ?></p>
+          &nbsp;</strong><?php esc_html_e(get_post_meta(get_the_ID(), 'property_offer', true)); ?></p>
+      <?php } ?>
 
+
+      <?php if(get_post(get_post_meta(get_the_ID(), 'property_agent', true)) != null){ ?>
 
       <p class="type"><strong style="color: black">Agent:
           &nbsp;</strong><?php echo get_post(get_post_meta(get_the_ID(), 'property_agent', true))->post_title; ?>
       </p>
+
+      <?php }?>
 
 
 
@@ -80,7 +95,7 @@
       </div>
     </div>
 
-    <div class='d-flex justify-content-end'>
+    <div class='d-flex justify-content-end mt-auto'>
       <a href="<?php the_permalink()?>" class="btn btn-secondary">More</a>
     </div>
 

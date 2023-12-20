@@ -9,6 +9,12 @@ if(!class_exists('thenaz_Custom_Post_Types')){
     add_action('init', [$this, 'custom_post_type']);
     add_action('add_meta_boxes', [$this, 'add_meta_box_property']);
     add_action('save_post', [$this, 'save_metabox'], 10, 2); // Приоритет количество перед параметров
+
+
+    add_action('manage_property_posts_columns', [$this, 'custom_columns_property']);
+    add_action('manage_property_posts_custom_column', [$this, 'custom_property_columns_data'], 10, 2);
+    add_filter('manage_edit-property_sortable_columns', [$this, 'custom_property_columns_sort']);
+    add_action('pre_get_posts', [$this, 'custom_property_order']);
   }
 
   public function add_meta_box_property(){
@@ -25,7 +31,7 @@ if(!class_exists('thenaz_Custom_Post_Types')){
   public function metabox_property_html($post){
     $price = get_post_meta($post->ID, 'property_price', true); // 3 параметр возвращает строку значение, а не ввиде массиова в случае с false
     $period = get_post_meta($post->ID, 'property_period', true);
-    $type = get_post_meta($post->ID, 'property_type', true);
+    $type = get_post_meta($post->ID, 'property_offer', true);
 
     wp_nonce_field('thenazfields', '_thenaz');
 
@@ -42,8 +48,8 @@ if(!class_exists('thenaz_Custom_Post_Types')){
     </p>
 
     <p>
-      <label for="property_type">Type</label>
-      <select id="property_type" name="property_type">
+      <label for="property_offer">Type</label>
+      <select id="property_offer" name="property_offer">
         <option value="empty" selected >Select Type</option>
         <option value="sale" '. selected('sale', $type, false) .'>For Sale</option>
         <option value="rent" '. selected('rent', $type, false) .'>For Rent</option>
@@ -108,13 +114,13 @@ if(!class_exists('thenaz_Custom_Post_Types')){
       update_post_meta($post_id, 'property_period', sanitize_text_field($_POST['property_period']));
     }
 
-    if(is_null($_POST['property_type'])){
-      delete_post_meta($post_id, 'property_type');
+    if(is_null($_POST['property_offer'])){
+      delete_post_meta($post_id, 'property_offer');
     }else{
-      update_post_meta($post_id, 'property_type', sanitize_text_field($_POST['property_type']));
+      update_post_meta($post_id, 'property_offer', sanitize_text_field($_POST['property_offer']));
     }
 
-    var_dump($_POST['property_agent']);
+ 
 
     if(is_null($_POST['property_agent'])){
       delete_post_meta($post_id, 'property_agent');
@@ -192,6 +198,76 @@ if(!class_exists('thenaz_Custom_Post_Types')){
         'menu_name'         => esc_html__( 'Type', 'thenaz' ),
       ]
     ]);
+  }
+
+  public function custom_columns_property($columns){
+    $title = $columns['title'];
+    $data = $columns['data'];
+    $location = $columns['taxonomy-location'];
+    $type = $columns['taxonomy-property-type'];
+
+    $columns['title'] = $title;
+    $columns['date'] = $date;
+    $columns['taxonomy-location'] = $location;
+    $columns['taxonomy-property-type'] = $type;
+    $columns['price'] = 'Price';
+    $columns['offer'] = 'Offer';
+    $columns['agent'] = 'Agent';
+
+    
+    return $columns;
+  }
+
+  public function custom_property_columns_data($column, $post_id){
+
+    $agent_id = get_post_meta($post_id, 'property_agent', true);
+    
+
+    if($agent_id !== 'empty'){
+      $agent = get_the_title($agent_id);
+    }else{
+      $agent = 'Indicate the Agent';
+    }
+
+    switch($column){
+      case 'price':
+        echo get_post_meta($post_id, 'property_price', true);
+        break;
+      case 'offer':
+        echo get_post_meta($post_id, 'property_offer', true);
+        break;
+      case 'agent':
+        echo $agent;
+        break;
+    };
+  }
+
+  public function custom_property_columns_sort($columns){
+    $columns['price'] = 'price';
+    $columns['offer'] = 'offer';
+    $columns['agent'] = 'agent';
+
+
+    return $columns;
+  }
+
+  public function custom_property_order($query){
+
+    if(!is_admin()){
+      return;
+    }
+
+    $orderBy = $query->get('orderby');
+
+    if('price' == $orderBy){
+      $query->set('meta_key', 'property_price');
+      $query->set('orderby', 'meta_value_num');
+    }
+
+    if('offer' == $orderBy){
+      $query->set('meta_key', 'property_offer');
+      $query->set('orderby', 'meta_value');
+    }
   }
 }
   

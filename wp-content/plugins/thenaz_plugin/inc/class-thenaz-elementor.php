@@ -33,6 +33,8 @@ final class Elementor_thenaz_Extension {
 			add_action( 'elementor/init', [ $this, 'init' ] );
 		}
 
+		add_action('elementor/elements/categories_registered', [$this, 'add_elementor_widget_categories']);
+
 	}
 
 
@@ -125,6 +127,16 @@ final class Elementor_thenaz_Extension {
 
 
 	public function register_controls( $controls_manager ) {}
+
+	public function add_elementor_widget_categories($elementor_manager){
+		$elementor_manager->add_category(
+			'thenaz',
+			[
+				'title' => 'thenaz',
+				'icon' => 'fa fa-plug'
+			]
+		);
+	}
 
 }
 
