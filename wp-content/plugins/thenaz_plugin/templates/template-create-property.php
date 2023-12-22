@@ -141,9 +141,9 @@
   <?php 
   
   if(isset($_GET['edit']) && !empty($_GET['edit'])){
-    $thenazTempalteLoader->get_template_part('parts/edit-property-form');
+    $thenazTemplateLoader->get_template_part('parts/edit-property-form');
   }else{
-    $thenazTempalteLoader->get_template_part('parts/create-property-form');
+    $thenazTemplateLoader->get_template_part('parts/create-property-form');
   }
 
 } else { ?>

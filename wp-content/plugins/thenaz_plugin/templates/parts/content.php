@@ -95,7 +95,17 @@
       </div>
     </div>
 
-    <div class='d-flex justify-content-end mt-auto'>
+    <div class='d-flex justify-content-between mt-auto'>
+
+      <?php 
+      
+      if(is_page_template('templates/template-wish-list.php')){ ?>
+      <a class="btn btn-primary" href="<?php echo admin_url('admin-ajax.php') ?>" id="thenaz_remove_property"
+        data-property-id="<?php echo get_the_ID()?>" data-user-id="<?php echo get_current_user_id()?>">Remove</a>
+      <?php }
+      
+      ?>
+
       <a href="<?php the_permalink()?>" class="btn btn-secondary">More</a>
     </div>
 

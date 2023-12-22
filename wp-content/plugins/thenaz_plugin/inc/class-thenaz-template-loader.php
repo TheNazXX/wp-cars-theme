@@ -14,7 +14,8 @@ class thenaz_Template_Loader extends Gamajo_Template_Loader
 
     $this->templates = [
       'templates/template-create-property.php' => 'Crete Property Template',
-      'templates/template-listproperty.php' => 'List Properties Template'
+      'templates/template-listproperty.php' => 'List Properties Template',
+      'templates/template-wish-list.php' => 'Wish List Properties Template'
     ];
 
     add_filter('theme_page_templates', [$this, 'create_property_template']);
@@ -73,7 +74,7 @@ class thenaz_Template_Loader extends Gamajo_Template_Loader
   }
 }
 
-$thenazTempalteLoader = new thenaz_Template_Loader();
-$thenazTempalteLoader->register();
+$thenazTemplateLoader = new thenaz_Template_Loader();
+$thenazTemplateLoader->register();
 
 ?>

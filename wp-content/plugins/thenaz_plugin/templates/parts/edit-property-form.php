@@ -123,10 +123,12 @@
         <input type="file" id="fileInput" class="inputfile" accept="image/*" name="img" />
 
         <label for="fileInput">
-          <?php if(has_post_thumbnail($post_property->ID)){?>
-          <img id="fileImg" src="<?php echo get_the_post_thumbnail_url($post_property->ID)?>" alt="#">
-          <?php } ?>
-          <?php 
+
+          <img id="fileImg" src="<?php echo get_the_post_thumbnail_url($post_property->ID)?>" alt="#"
+            style="<?php echo (!has_post_thumbnail($post_property->ID)) ? 'display: none;' : ''?>">
+
+
+          <?php
             if(!has_post_thumbnail($post_property->ID)){ ?>
           <span id="mockFileImg" class="dashicons dashicons-embed-photo"></span>
           <?php }

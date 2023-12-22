@@ -6,7 +6,7 @@
 
 <div class="container-lg-c">
 
-  <?php $thenazTempalteLoader->get_template_part('parts/filter')?>
+  <?php $thenazTemplateLoader->get_template_part('parts/filter')?>
 
   <div class="swiper mySwiper fade-side">
     <div class="swiper-wrapper">
@@ -68,7 +68,7 @@
 
       <?php if ( $properties->have_posts() ) : while ( $properties->have_posts() ) : $properties->the_post(); ?>
       <div class="swiper-slide">
-        <?php $thenazTempalteLoader->get_template_part('parts/content')?>
+        <?php $thenazTemplateLoader->get_template_part('parts/content')?>
       </div>
 
       <?php endwhile; else : ?>
@@ -82,7 +82,7 @@
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div class="swiper-slide">
-        <?php $thenazTempalteLoader->get_template_part('parts/content')?>
+        <?php $thenazTemplateLoader->get_template_part('parts/content')?>
       </div>
 
       <?php endwhile; else : ?>

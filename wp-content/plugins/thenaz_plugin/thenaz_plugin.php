@@ -28,6 +28,7 @@ require THENAZ_PROPERTY_PATH . 'inc/class-custom-shortcodes.php';
 require THENAZ_PROPERTY_PATH . 'inc/class-filter-widget.php';
 require THENAZ_PROPERTY_PATH . 'inc/class-thenaz-elementor.php';
 require THENAZ_PROPERTY_PATH . 'inc/class-thenaz-booking-form.php';
+require THENAZ_PROPERTY_PATH . 'inc/class-property-wish-list.php';
 
 
 class thenaz_plugin
@@ -99,6 +100,8 @@ class thenaz_plugin
     wp_enqueue_style('thenaz-front-style', plugins_url('/assets/css/front/style.css', __FILE__));
     wp_enqueue_script('thenaz-swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
     wp_enqueue_script('thenaz-typed-script', 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12');
+    wp_enqueue_script('jquery-form');
+
   }
 
 
